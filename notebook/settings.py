@@ -30,7 +30,13 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG') == "True"
 
 production_host = os.getenv('PRODUCTION_HOST')
-ALLOWED_HOSTS = ['cpenotebook.onrender.com', production_host] if production_host is not None else []
+allowed_hosts_str = os.environ.get("ALLOWED_HOSTS", "")
+
+# Split the string into a list
+ALLOWED_HOSTS = allowed_hosts_str.split(" ")
+
+# Remove any empty strings from the list
+ALLOWED_HOSTS = [host for host in ALLOWED_HOSTS if host]
 
 # Application definition
 
