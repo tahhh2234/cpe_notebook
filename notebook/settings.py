@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG') == "True"
 
 production_host = os.getenv('PRODUCTION_HOST')
-ALLOWED_HOSTS = [production_host] if production_host is not None else []
+ALLOWED_HOSTS = ['cpenotebook.onrender.com', production_host] if production_host is not None else []
 
 # Application definition
 
