@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block site_title %}{% endblock %}CPEnotebook</title>
-    <link rel="icon" href="{% static 'app_general/weblogo.png' %}">
-    <link rel="stylesheet" href="{% static 'app_general/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'app_general/main.css' %}">
+    <link rel="icon" href="{% static 'app_general/weblogo.png' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'app_general/normalize.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'app_general/main.css' %}" type="text/css">
 </head>
 <body>
     {% include 'app_general/components/site_header.html' %}
     {% block content %}{% endblock %}
     {% include 'app_general/components/site_footer.html' %}
-    <script src="{% static 'app_general/main.js' %}"></script>
+    <script src="{% static 'app_general/main.js' %}" type="text/css"></script>
 </body>
 </html>
